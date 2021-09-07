@@ -1,0 +1,28 @@
+BoxLayout:
+    orientation:'vertical'
+    BoxLayout:
+        orientation:'horizontal'
+        TextInput:
+            id:input_number
+            text:''
+            font_size:48
+            multiline:False
+        BoxLayout:
+            orientation:'horizontal'
+            Button:
+                text:'Up'
+                on_press: app.handle_increment(+1)
+            Button:
+                text:'Down'
+                on_press: app.handle_increment(-1)
+    BoxLayout:
+        Button:
+            text:'Convert to km'
+            on_press:app.handle_calculate(float(input_number.text))
+    BoxLayout:
+        Label:
+            id:output_label
+            color:(1,1,0,1)
+            font_size:48
+
+
