@@ -1,4 +1,4 @@
-from prac08.silver_service_taxi import Silverservicetaxi
+from prac.prac08.silver_service_taxi import Silverservicetaxi
 def main():
     car1=Silverservicetaxi("Car1",100,35)
     car1.drive(15)

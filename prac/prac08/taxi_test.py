@@ -1,4 +1,4 @@
-from prac08.taxi import Taxi
+from prac.prac08.taxi import Taxi
 def main():
     taxi_one=Taxi("Prius 1", 100)
     taxi_one.drive(40)

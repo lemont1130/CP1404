@@ -1,4 +1,4 @@
-from prac06.guitar import guitar
+from prac.prac06.guitar import guitar
 def test():
     name = "Gibson L-5 CES"
     year = 1922

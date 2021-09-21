@@ -1,4 +1,4 @@
-from prac08.car import Car
+from prac.prac08.car import Car
 import random
 class Unreliablecar(Car):
     def __init__(self,name,fuel,reliability):

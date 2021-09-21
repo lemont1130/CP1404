@@ -1,4 +1,4 @@
-from prac06.guitar import guitar
+from prac.prac06.guitar import guitar
 def main():
     guitar_list=[]
     print("My Guitars!")

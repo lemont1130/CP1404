@@ -18,7 +18,7 @@ count=0
 
 price = INITIAL_PRICE
 print("Staring price :${:,.2f}".format(price))
-out_file=open("output.txt",'w')
+out_file=open("output.txt", 'w')
 
 while price >= MIN_PRICE and price <= MAX_PRICE:
     price_change = 0
