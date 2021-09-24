@@ -21,7 +21,7 @@ BoxLayout:
         Label:
             text:'Country:'
         TextInput:
-            id:input_Country
+            id:input_country
             text:''
             multiline:False
             font_size:35
@@ -34,28 +34,34 @@ BoxLayout:
             font_size:35
         Button:
             text:'Add Place'
-            on_press:
+            on_press:app.add_place_button()
         Button:
             text:'Clear'
-            on_press:
+            on_press:app.clear_button()
     BoxLayout:
         orientation:'vertical'
         Label:
             id:output_label1
-            color:
-            font_size:35
+            color:(1,1,1,1)
+            font_size:10
+            text:'Place to visit:'
         Button:
+            id:button1
+            text:'Lima in Peru, priority 3(visited)'
+            on_press:app.click_for_visited()
+        Button:
+            id:button2
+            text:'Auckland in New Zealand, priority 1(visited)'
             on_press:
         Button:
-            on_press:
-        Button:
-            on_press:
-        Button:
-            on_press:
+            id:button3
+            text:'Rome in Italy, priority 12'
+            on_press:app.click_for_visited()
         Label:
             id:output_label2
-            color:
-            font_size:35
+            color:(1,1,1,1)
+            font_size:15
+            text:'Welcome to Travel Tracker 2.0'
 
 
 
