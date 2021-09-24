@@ -9,8 +9,9 @@ class PlaceCollection:
     def load_place(self):
         with open('places.csv','r')as in_file:
             placesreader=csv.reader(in_file)
-            for place in placesreader:
-                place_str=place.split(',')
-                self.placelist.append([Place(place_str[0],place_str[1],place_str[2],place_str[3].strip())])
+    def add_place(self):
+        with open('places.csv','w') as in_file:
+            for place in self.placelist:
+                in_file.write(place[0].name+','+place[0].country+','+place[0].priority+'\n')
 
 
