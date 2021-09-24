@@ -1,0 +1,60 @@
+BoxLayout:
+    orientation:'horizontal'
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:'Sort by:'
+        Spinner:
+            text:
+            id:state_select
+            value:
+        Label:
+            text:'Add New Place here'
+        Label:
+            text:'Name:'
+        TextInput:
+            id:input_name
+            text:''
+            multiline:False
+            font_size:35
+        Label:
+            text:'Country:'
+        TextInput:
+            id:input_Country
+            text:''
+            multiline:False
+            font_size:35
+        Label:
+            text:'Priority:'
+        TextInput:
+            id:input_priority
+            text:''
+            multiline:False
+            font_size:35
+        Button:
+            text:'Add Place'
+            on_press:
+        Button:
+            text:'Clear'
+            on_press:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            id:output_label1
+            color:
+            font_size:35
+        Button:
+            on_press:
+        Button:
+            on_press:
+        Button:
+            on_press:
+        Button:
+            on_press:
+        Label:
+            id:output_label2
+            color:
+            font_size:35
+
+
+
