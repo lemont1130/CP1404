@@ -8,6 +8,7 @@ BoxLayout:
             id:state_select
             text: app.current_state
             value:app.state_codes
+            on_press:app.click_for_visited()
 
         Label:
             text:'Add New Place here'
@@ -45,18 +46,9 @@ BoxLayout:
             color:(1,1,1,1)
             font_size:10
             text:'Place to visit:'
-        Button:
-            id:button1
-            text:'Lima in Peru, priority 3(visited)'
-            on_press:app.click_for_visited()
-        Button:
-            id:button2
-            text:'Auckland in New Zealand, priority 1(visited)'
-            on_press:
-        Button:
-            id:button3
-            text:'Rome in Italy, priority 12'
-            on_press:app.click_for_visited()
+        BoxLayout:
+            orientation:'vertical'
+            id:buttonlayout
         Label:
             id:output_label2
             color:(1,1,1,1)

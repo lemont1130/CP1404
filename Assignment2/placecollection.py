@@ -7,15 +7,28 @@ class PlaceCollection:
     def append_place(self,name,country,priority):
         self.placelist.append(Place(name,country,priority,'n'))
     def load_place(self):
-        with open('places.csv','r')as in_file:
-            places_reader=csv.reader(in_file)
-            for place in places_reader:
-                self.placelist.append(Place(place[0],place[1],place[2],place[3]))
+        filereader= open('places.csv','r')
+        for place in filereader:
+            place_string=place.split(',')
+            self.placelist.append([Place(place_string[0],place_string[1],int(place_string[2]),place_string[3].strip())])
+        filereader.close()
 
     def add_place(self):
-        with open('places.csv','w') as in_file:
-            for place in self.placelist:
-                in_file.write(place[0].name+','+place[0].country+','+place[0].priority+'\n')
+        filewriter=open('places.csv','w')
+        writer=csv.writer(filewriter)
+        writer.writerows(self.placelist)
+        filewriter.close()
+    def count_invite_place(self):
+        place_to_invite=0
+        for place in self.placelist:
+            if place[0].status=='n':
+                place_to_invite+=1
+        return place_to_invite
+    def get_place(self,name):
+        for place in self.placelist:
+            if place[0].name==name:
+                return place[0]
+
 
 
 
